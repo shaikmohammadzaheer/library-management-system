@@ -30,7 +30,6 @@ class Issue(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     student_name = db.Column(db.String(100))
     book_id = db.Column(db.Integer)
-
 # --------------------
 # ROUTES
 # --------------------

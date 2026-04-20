@@ -90,7 +90,6 @@ def edit_student(id):
     if request.method == 'POST':
         student.name = request.form['name']
         student.roll = request.form['roll']
-
         db.session.commit()
         return redirect('/student')
 

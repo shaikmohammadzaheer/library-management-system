@@ -8,22 +8,21 @@
 
 <br>
 <div class="card shadow p-3 mt-3">
-<table class="table table-bordered table-hover"></table>
-</div>
+<table border="1">
     <tr>
         <th>Name</th>
         <th>Roll No</th>
+        <th>Actions</th>
     </tr>
 
-{% for s in students %}
-<tr>
-    <td>{{ s.name }}</td>
-    <td>{{ s.roll }}</td>
-    <td>
-        <a href="/edit_student/{{ s.id }}" class="btn btn-warning btn-sm me-1">Edit</a>
-        
-        <a href="/delete_student/{{ s.id }}" class="btn btn-danger btn-sm">Delete</a>
-    </td>
-</tr>
-{% endfor %}
+    {% for student in students %}
+    <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.roll }}</td>
+        <td>
+            <a href="/edit/{{ student.id }}">Edit</a>
+            <a href="/delete/{{ student.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
 </table>

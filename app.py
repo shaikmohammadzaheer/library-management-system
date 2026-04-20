@@ -185,11 +185,14 @@ def edit_student(id):
 
     return render_template('edit_student.html', student=student)
 
-# --------------------
-# RUN APP
-# --------------------
-if __name__ == "__main__":
-    with app.app_context():
-        db.create_all()
+# -------------------
+# CREATE TABLES
+# -------------------
+with app.app_context():
+    db.create_all()
 
+# -------------------
+# RUN APP
+# -------------------
+if __name__ == "__main__":
     app.run(debug=True)

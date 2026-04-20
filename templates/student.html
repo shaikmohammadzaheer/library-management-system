@@ -1,14 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
 <h2>Student Management</h2>
 
-<form method="POST">
-    <input name="name" placeholder="Name">
-    <input name="roll" placeholder="Roll No">
+<form method="POST" class="d-flex gap-2 mb-3">
+    <input name="name" placeholder="Name" class="form-control" required>
+    <input name="roll" placeholder="Roll No" class="form-control" required>
     <button class="btn btn-primary">Add Student</button>
 </form>
 
-<br>
-<div class="card shadow p-3 mt-3">
-<table border="1">
+<div class="card shadow p-3">
+<table class="table table-bordered">
     <tr>
         <th>Name</th>
         <th>Roll No</th>
@@ -20,9 +22,11 @@
         <td>{{ student.name }}</td>
         <td>{{ student.roll }}</td>
         <td>
-           <a href="/edit_student/{{ s.id }}">Edit</a>
-           <a href="/delete_student/{{ s.id }}">Delete</a>
+           <a href="/edit_student/{{ student.id }}" class="btn btn-warning btn-sm">Edit</a>
+           <a href="/delete_student/{{ student.id }}" class="btn btn-danger btn-sm">Delete</a>
         </td>
     </tr>
     {% endfor %}
 </table>
+</div>
+{% endblock %}

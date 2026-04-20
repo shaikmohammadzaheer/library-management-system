@@ -85,19 +85,18 @@ def delete_book(id):
 
 
 # ✏️ EDIT BOOK
-@app.route('/edit/<int:id>', methods=['GET', 'POST'])
-def edit_book(id):
-    book = Book.query.get(id)
+@app.route('/edit_student/<int:id>', methods=['GET', 'POST'])
+def edit_student(id):
+    student = Student.query.get(id)
 
     if request.method == 'POST':
-        book.title = request.form['title']
-        book.author = request.form['author']
-        book.quantity = request.form['quantity']
+        student.name = request.form['name']
+        student.roll = request.form['roll']
 
         db.session.commit()
-        return redirect('/books')
+        return redirect('/student')
 
-    return render_template('edit.html', book=book)
+    return render_template('edit_student.html', student=student)
 
 
 # 👨‍🎓 STUDENT PAGE

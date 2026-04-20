@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">Student Dashboard</h2>
+
+<!-- Info Cards -->
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary shadow">
+            <div class="card-body">
+                <h5>Books Issued</h5>
+                <h2>2</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-warning shadow">
+            <div class="card-body">
+                <h5>Pending Return</h5>
+                <h2>1</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-danger shadow">
+            <div class="card-body">
+                <h5>Total Fine</h5>
+                <h2>₹10</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Issued Books -->
+<div class="card shadow">
+    <div class="card-header">
+        My Books
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>DBMS</td>
+                    <td>2026-04-01</td>
+                    <td><span class="badge bg-success">Issued</span></td>
+                </tr>
+
+                <tr>
+                    <td>Python</td>
+                    <td>2026-04-02</td>
+                    <td><span class="badge bg-danger">Overdue</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

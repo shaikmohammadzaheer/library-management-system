@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center py-5">
+    <h1 class="display-3 fw-bold mb-3">Smart Library System</h1>
+    <p class="lead mb-4">Manage books, track issues, and organize everything efficiently</p>
+
+    <a href="/student" class="btn btn-primary">Login</a>
+    <a href="/books" class="btn btn-success">Get Started</a>
+</div>
+
+<!-- Features Section -->
+<div class="row text-center mt-5">
+    <div class="col-md-4">
+        <h4>📚 Book Management</h4>
+        <p>Add, update and manage all books easily</p>
+    </div>
+
+    <div class="col-md-4">
+        <h4>👨‍🎓 Student Access</h4>
+        <p>Students can search and issue books</p>
+    </div>
+
+    <div class="col-md-4">
+        <h4>⏰ Fine Tracking</h4>
+        <p>Automatic fine calculation for late returns</p>
+    </div>
+</div>
+{% endblock %}

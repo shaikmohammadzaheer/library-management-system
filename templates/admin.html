@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <h2 class="mb-4 text-center">Admin Dashboard</h2>
+
+    <div class="row text-center">
+
+        <div class="col-md-4">
+            <div class="card shadow p-3">
+                <h5>Total Books</h5>
+                <h2>{{ books }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-3">
+                <h5>Total Students</h5>
+                <h2>{{ students }}</h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-3">
+                <h5>Books Issued</h5>
+                <h2>{{ issued }}</h2>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

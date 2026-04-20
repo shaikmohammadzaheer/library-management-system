@@ -1,0 +1,29 @@
+<h2>Student Management</h2>
+
+<form method="POST">
+    <input name="name" placeholder="Name">
+    <input name="roll" placeholder="Roll No">
+    <button class="btn btn-primary">Add Student</button>
+</form>
+
+<br>
+<div class="card shadow p-3 mt-3">
+<table class="table table-bordered table-hover"></table>
+</div>
+    <tr>
+        <th>Name</th>
+        <th>Roll No</th>
+    </tr>
+
+{% for s in students %}
+<tr>
+    <td>{{ s.name }}</td>
+    <td>{{ s.roll }}</td>
+    <td>
+        <a href="/edit_student/{{ s.id }}" class="btn btn-warning btn-sm me-1">Edit</a>
+        
+        <a href="/delete_student/{{ s.id }}" class="btn btn-danger btn-sm">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+</table>

@@ -1,0 +1,11 @@
+<h2>Issue Book: {{ book.title }}</h2>
+
+<form method="POST">
+    <select name="student" class="form-control mb-2">
+        {% for s in students %}
+            <option value="{{ s.name }}">{{ s.name }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit" class="btn btn-success">Issue Book</button>
+</form>

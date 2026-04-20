@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">Issue / Return Books</h2>
+
+<!-- Issue Section -->
+<div class="card shadow mb-4">
+    <div class="card-header">
+        Issue Book
+    </div>
+    <div class="card-body">
+        <form class="row g-3">
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="User Name">
+            </div>
+
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="Book Title">
+            </div>
+
+            <div class="col-md-4">
+                <button class="btn btn-primary w-100">Issue Book</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Issued Books Table -->
+<div class="card shadow">
+    <div class="card-header">
+        Issued Books
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Book</th>
+                    <th>Due Date</th>
+                    <th>Fine</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Zaheer</td>
+                    <td>DBMS</td>
+                    <td>2026-04-01</td>
+                    <td>₹0</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">Return</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Kowshick</td>
+                    <td>Python</td>
+                    <td>2026-04-02</td>
+                    <td>₹10</td>
+                    <td>
+                        <button class="btn btn-success btn-sm">Return</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

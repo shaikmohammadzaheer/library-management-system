@@ -1,0 +1,21 @@
+<h2>Issued Books</h2>
+
+<div class="card shadow p-3 mt-3">
+    <table class="table table-bordered table-hover"></table>
+    </div>
+    <tr>
+        <th>Student</th>
+        <th>Book</th>
+        <th>Action</th>
+    </tr>
+
+    {% for r in records %}
+    <tr>
+        <td>{{ r.student_name }}</td>
+        <td>{{ r.book_id }}</td>
+        <td>
+            <a href="/return/{{ r.id }}" class="btn btn-info btn-sm">Return</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>

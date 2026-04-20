@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">Admin Dashboard</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3 shadow">
+            <div class="card-body">
+                <h5>Total Books</h5>
+                <h2>120</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3 shadow">
+            <div class="card-body">
+                <h5>Issued Books</h5>
+                <h2>45</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-danger mb-3 shadow">
+            <div class="card-body">
+                <h5>Overdue Books</h5>
+                <h2>10</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Table -->
+<div class="card mt-4 shadow">
+    <div class="card-header">
+        Recent Activity
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Book</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zaheer</td>
+                    <td>DBMS</td>
+                    <td>2026-04-01</td>
+                </tr>
+                <tr>
+                    <td>Kowshick</td>
+                    <td>Python</td>
+                    <td>2026-04-02</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,30 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Issued Books</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-    <h1>Issued Books</h1>
+{% block content %}
+<h2>Issued Books</h2>
 
-    <table border="1">
-        <tr>
-            <th>Student</th>
-            <th>Book</th>
-            <th>Action</th>
-        </tr>
+<table class="table table-bordered">
+    <tr>
+        <th>Student</th>
+        <th>Book</th>
+        <th>Action</th>
+    </tr>
 
-        {% for item in records %}
-        <tr>
-            <td>{{ item.student }}</td>
-            <td>{{ item.book }}</td>
-            <td>
-                <a href="/return/{{ item.id }}">Return</a>
-            </td>
-        </tr>
-        {% endfor %}
+    {% for item in records %}
+    <tr>
+        <td>{{ item.student }}</td>
+        <td>{{ item.book }}</td>
+        <td>
+            <a href="/return/{{ item.id }}" class="btn btn-success btn-sm">Return</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
 
-    </table>
-
-</body>
-</html>
+{% endblock %}

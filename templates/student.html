@@ -20,8 +20,8 @@
         <td>{{ student.name }}</td>
         <td>{{ student.roll }}</td>
         <td>
-            <a href="/edit/{{ student.id }}">Edit</a>
-            <a href="/delete/{{ student.id }}">Delete</a>
+           <a href="/edit_student/{{ s.id }}">Edit</a>
+           <a href="/delete_student/{{ s.id }}">Delete</a>
         </td>
     </tr>
     {% endfor %}

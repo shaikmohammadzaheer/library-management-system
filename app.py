@@ -142,8 +142,9 @@ def issued_books():
     data = []
     for r in records:
         book = Book.query.get(r.book_id)
+
         data.append({
-            'student': r.student_name,
+            'student': r.student_name,   # make sure this exists
             'book': book.title if book else "Unknown",
             'id': r.id
         })

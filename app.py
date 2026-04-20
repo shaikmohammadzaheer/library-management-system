@@ -168,18 +168,7 @@ def return_book(id):
     return redirect('/issued')
 
 
-@app.route('/edit_student/<int:id>', methods=['GET', 'POST'])
-def edit_student(id):
-    student = Student.query.get(id)
 
-    if request.method == 'POST':
-        student.name = request.form['name']
-        student.roll = request.form['roll']
-
-        db.session.commit()
-        return redirect('/student')
-
-    return render_template('edit_student.html', student=student)
 
 # -------------------
 # CREATE TABLES

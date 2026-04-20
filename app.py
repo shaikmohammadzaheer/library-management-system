@@ -71,17 +71,15 @@ def add_book():
 
 
 # ❌ DELETE BOOK
-@app.route('/delete/<int:id>')
-def delete_book(id):
-    book = Book.query.get(id)
+@app.route('/delete_student/<int:id>')
+def delete_student(id):
+    student = Student.query.get(id)
 
-    try:
-        db.session.delete(book)
+    if student:
+        db.session.delete(student)
         db.session.commit()
-    except:
-        db.session.rollback()
 
-    return redirect('/books')
+    return redirect('/student')
 
 
 # ✏️ EDIT BOOK

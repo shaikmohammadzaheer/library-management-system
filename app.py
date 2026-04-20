@@ -84,6 +84,17 @@ def add_book():
 
     return redirect('/books')
 
+# ❌ DELETE BOOK
+@app.route('/delete/<int:id>')
+def delete_book(id):
+    book = Book.query.get(id)
+
+    if book:
+        db.session.delete(book)
+        db.session.commit()
+
+    return redirect('/books')
+
 
 # ❌ DELETE BOOK
 @app.route('/delete_student/<int:id>')

@@ -167,12 +167,6 @@ def return_book(id):
 
     return redirect('/issued')
 
-@app.route('/delete_student/<int:id>')
-def delete_student(id):
-    student = Student.query.get(id)
-    db.session.delete(student)
-    db.session.commit()
-    return redirect('/student')
 
 @app.route('/edit_student/<int:id>', methods=['GET', 'POST'])
 def edit_student(id):

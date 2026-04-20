@@ -45,6 +45,21 @@ def books():
     all_books = Book.query.all()
     return render_template('books.html', books=all_books)
 
+# ✏️ EDIT BOOK
+@app.route('/edit/<int:id>', methods=['GET', 'POST'])
+def edit_book(id):
+    book = Book.query.get(id)
+
+    if request.method == 'POST':
+        book.title = request.form['title']
+        book.author = request.form['author']
+        book.quantity = request.form['quantity']
+
+        db.session.commit()
+        return redirect('/books')
+
+    return render_template('edit.html', book=book)
+
 @app.route('/admin')
 def admin():
     total_books = Book.query.count()
